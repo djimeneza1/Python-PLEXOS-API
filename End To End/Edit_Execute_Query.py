@@ -6,7 +6,10 @@ from datetime import datetime
 
 from shutil import copyfile
 
-plexospath = 'C:/Program Files/Energy Exemplar/PLEXOS 9.0 API'
+#plexospath = 'C:/Program Files/Energy Exemplar/PLEXOS 9.0 API'
+#sys.path.append(plexospath)
+
+plexospath='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
 sys.path.append(plexospath)
 clr.AddReference('PLEXOS_NET.Core')
 clr.AddReference('EEUTILITY')

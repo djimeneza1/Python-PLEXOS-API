@@ -9,8 +9,10 @@ import os, sys, clr, datetime as dt
 from shutil import copyfile
 
 # load PLEXOS assemblies
-plexos_path = 'C:/Program Files/Energy Exemplar/PLEXOS 9.0 API'
+#plexos_path = 'C:/Program Files/Energy Exemplar/PLEXOS 9.0 API'
+#sys.path.append(plexos_path)
 
+plexos_path='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
 sys.path.append(plexos_path)
 clr.AddReference('PLEXOS_NET.Core')
 clr.AddReference('EEUTILITY')

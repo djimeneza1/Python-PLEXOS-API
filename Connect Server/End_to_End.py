@@ -20,7 +20,15 @@ import csv
 from shutil import copyfile
 
 # .NET related imports
+'''
 sys.path.append('C:\Program Files\Energy Exemplar\PLEXOS 9.0 API')
+clr.AddReference('PLEXOS_NET.Core')
+clr.AddReference('EEUTILITY')
+clr.AddReference('EnergyExemplar.PLEXOS.Utility')
+'''
+
+plexos_path='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
+sys.path.append(plexos_path)
 clr.AddReference('PLEXOS_NET.Core')
 clr.AddReference('EEUTILITY')
 clr.AddReference('EnergyExemplar.PLEXOS.Utility')

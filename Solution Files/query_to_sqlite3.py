@@ -15,7 +15,13 @@ import sqlite3 as sql
 
 # load PLEXOS assemblies... replace the path below with the installation
 #   installation folder for your PLEXOS installation.
-sys.path.append('C:/Program Files/Energy Exemplar/PLEXOS 9.0 API')
+#sys.path.append('C:/Program Files/Energy Exemplar/PLEXOS 9.0 API')
+#clr.AddReference('PLEXOS_NET.Core')
+#clr.AddReference('EEUTILITY')
+#clr.AddReference('EnergyExemplar.PLEXOS.Utility')
+
+plexos_path='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
+sys.path.append(plexos_path)
 clr.AddReference('PLEXOS_NET.Core')
 clr.AddReference('EEUTILITY')
 clr.AddReference('EnergyExemplar.PLEXOS.Utility')
@@ -84,7 +90,8 @@ wb = pd.ExcelWriter('sql_query.xlsx')
 sql_df.to_excel(wb, 'SQL Query')
 
 # save the excel file
-wb.save()
+#wb.save()
+wb.close()
 
 # close the sqlite3 connection
 conn.close()

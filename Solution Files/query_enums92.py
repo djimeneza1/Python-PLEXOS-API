@@ -7,7 +7,10 @@ Created on Fri Sep 08 16:03:57 2017
 
 import os, sys, clr
 
-sys.path.append('C:/Program Files/Energy Exemplar/PLEXOS 9.2 API')
+#sys.path.append('C:/Program Files/Energy Exemplar/PLEXOS 9.2 API')
+
+plexos_path='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
+sys.path.append(plexos_path)
 clr.AddReference('EEUTILITY')
 clr.AddReference('EnergyExemplar.PLEXOS.Utility')
 clr.AddReference('PLEXOSCommon')

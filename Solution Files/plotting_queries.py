@@ -15,7 +15,15 @@ import matplotlib.pyplot as plt
 
 # load PLEXOS assemblies... replace the path below with the installation
 #   installation folder for your PLEXOS installation.
+'''
 sys.path.append('C:/Program Files/Energy Exemplar/PLEXOS 9.0 API')
+clr.AddReference('PLEXOS_NET.Core')
+clr.AddReference('EEUTILITY')
+clr.AddReference('EnergyExemplar.PLEXOS.Utility')
+'''
+
+plexos_path='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
+sys.path.append(plexos_path)
 clr.AddReference('PLEXOS_NET.Core')
 clr.AddReference('EEUTILITY')
 clr.AddReference('EnergyExemplar.PLEXOS.Utility')

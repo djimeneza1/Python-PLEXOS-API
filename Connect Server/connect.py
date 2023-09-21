@@ -11,7 +11,9 @@ P9 Tested
 import getpass, os, sys, clr
 
 # load PLEXOS assemblies
-sys.path.append('C:\Program Files\Energy Exemplar\PLEXOS 9.0 API')
+#sys.path.append('C:\Program Files\Energy Exemplar\PLEXOS 9.2 API')
+plexos_path='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
+sys.path.append(plexos_path)
 clr.AddReference('PLEXOS_NET.Core')
 clr.AddReference('EEUTILITY')
 clr.AddReference('EnergyExemplar.PLEXOS.Utility')
@@ -22,6 +24,7 @@ from EEUTILITY.Enums import *
 from EnergyExemplar.PLEXOS.Utility.Enums import *
 from System import *
 
+
 server =   input('Server:          ')
 port =     input('Port (def:8888): ')
 try:
@@ -31,10 +34,12 @@ except:
 username = input('Username:        ')
 password = getpass.getpass('Password:        ')
 
+
 # connect to the PLEXOS Connect server
 cxn = plx.PLEXOSConnect()
 cxn.DisplayAlerts = False
 cxn.Connection('Data Source={}:{};User Id={};Password={}'.format(server,port,username,password))
+
 
 print('*'*30)
 print('Datasets')

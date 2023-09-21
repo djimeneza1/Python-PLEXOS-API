@@ -16,7 +16,13 @@ from shutil import copyfile
 # load PLEXOS assemblies
 # unfortunately there was an error in the PLEXOS 8.1 API that caused
 #   scenario tagging to fail. It was fixed in version 8.2.
-sys.path.append('C:\Program Files\Energy Exemplar\PLEXOS 9.0 API')
+#sys.path.append('C:\Program Files\Energy Exemplar\PLEXOS 9.0 API')
+#clr.AddReference('PLEXOS_NET.Core')
+#clr.AddReference('EEUTILITY')
+#clr.AddReference('EnergyExemplar.PLEXOS.Utility')
+
+plexospath='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
+sys.path.append(plexospath)
 clr.AddReference('PLEXOS_NET.Core')
 clr.AddReference('EEUTILITY')
 clr.AddReference('EnergyExemplar.PLEXOS.Utility')

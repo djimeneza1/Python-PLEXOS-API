@@ -12,7 +12,13 @@ P9 Tested
 import os, sys, clr
 
 # load PLEXOS assemblies
-sys.path.append('C:\Program Files\Energy Exemplar\PLEXOS 9.0 API')
+#sys.path.append('C:\Program Files\Energy Exemplar\PLEXOS 9.0 API')
+#clr.AddReference('PLEXOS_NET.Core')
+#clr.AddReference('EEUTILITY')
+#clr.AddReference('EnergyExemplar.PLEXOS.Utility')
+
+plexospath='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
+sys.path.append(plexospath)
 clr.AddReference('PLEXOS_NET.Core')
 clr.AddReference('EEUTILITY')
 clr.AddReference('EnergyExemplar.PLEXOS.Utility')

@@ -1,6 +1,8 @@
 import os, sys, clr, pandas as pd
 
-sys.path.append('C:/Program Files/Energy Exemplar/PLEXOS 9.0 API')
+#sys.path.append('C:/Program Files/Energy Exemplar/PLEXOS 9.0 API')
+plexos_path='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
+sys.path.append(plexos_path)
 clr.AddReference('PLEXOS_NET.Core')
 clr.AddReference('EEUTILITY')
 clr.AddReference('EnergyExemplar.PLEXOS.Utility')

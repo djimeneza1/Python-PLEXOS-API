@@ -15,7 +15,13 @@ from datetime import datetime
 
 # load PLEXOS assemblies... replace the path below with the installation
 #   installation folder for your PLEXOS installation.
-sys.path.append('C:/Program Files/Energy Exemplar/PLEXOS 9.0 API')
+#sys.path.append('C:/Program Files/Energy Exemplar/PLEXOS 9.0 API')
+#clr.AddReference('PLEXOS_NET.Core')
+#clr.AddReference('EEUTILITY')
+#clr.AddReference('EnergyExemplar.PLEXOS.Utility')
+
+plexos_path='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
+sys.path.append(plexos_path)
 clr.AddReference('PLEXOS_NET.Core')
 clr.AddReference('EEUTILITY')
 clr.AddReference('EnergyExemplar.PLEXOS.Utility')
@@ -77,4 +83,5 @@ else:
         df = pd.DataFrame([[row.GetProperty.Overloads[String](n) for n in columns] for row in results], columns=columns)
         wb = pd.ExcelWriter('query.xlsx')
         df.to_excel(wb, 'Query') # 'Query' is the name of the worksheet
-        wb.save()
+        #wb.save()
+        wb.close()

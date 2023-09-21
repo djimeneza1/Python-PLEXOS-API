@@ -11,7 +11,15 @@ Created on Fri Sep 08 15:03:46 2017
 import os, clr, sys
 
 # Python .NET interface
+'''
 sys.path.append('C:/Program Files/Energy Exemplar/PLEXOS 9.0 API')
+clr.AddReference('PLEXOS_NET.Core')
+clr.AddReference('EEUTILITY')
+clr.AddReference('EnergyExemplar.PLEXOS.Utility')
+'''
+
+plexos_path='C:\Program Files\Energy Exemplar\PLEXOS 9.2 API'
+sys.path.append(plexos_path)
 clr.AddReference('PLEXOS_NET.Core')
 clr.AddReference('EEUTILITY')
 clr.AddReference('EnergyExemplar.PLEXOS.Utility')
